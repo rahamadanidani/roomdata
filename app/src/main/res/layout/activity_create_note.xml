@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.CreateNoteActivity">
+    <!--tampilan turunan yang di gunakan untuk menentukan posisinya relatif
+    erhadap tampilan induk atau terhadap sesama tampilan turunan (ditentukan menurut ID).-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <!--digunakan untk mengelompokan tampilan yang menyejajarkan semua turunan dalam satu arah,
+            secara  vertikal yang berada di tengah-tengah.-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+//Menampilkan gambar yang berada pada drawlable.
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_baseline_close_24" />
+<!--Menampilkan text untuk  menambahkan catatan baru,mengatur tata letak,ukuran dan tebal textnya.-->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Add new note"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <!--Menampilkan text untuk perintah selesai,mengatur tata letak,ukuran,warna dan tebal textnya.-->
+        <TextView
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Done"
+            android:textColor="#03A9F4"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <EditText
+            android:id="@+id/edt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Title"
+            android:inputType="textMultiLine"
+            android:maxLines="8"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+<!--Menampilkan text untuk perintah mengedit atau melakukan perubahan pada judul catatannya.-->
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/edt_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Title"
+            android:inputType="textMultiLine"
+            android:maxLines="5"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
